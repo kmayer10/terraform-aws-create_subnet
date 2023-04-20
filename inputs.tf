@@ -1,12 +1,21 @@
-variable "vpc_id" {
-  description = "Enter the ID of VPC where subnets needs to be created."
+variable "name" {}
+variable "type" {
+  default = "private"
 }
-variable "subnet_counter" {
-  description = "Enter the Number to be used as third digit of subnet CIDR value calculation."
+variable "vpc_id" {}
+variable "subnetStartPoint" {}
+variable "route_table_needed" {
+  default = false
 }
-variable "name" {
-  description = "Value to be used for Name Tag"
+variable "route_table_id" {
+  default = null
 }
-variable "subnet_type" {
-  description = "Enter Subnet Type, Select from: private/public"
+variable "nat_route_needed" {
+  default = false
+}
+variable "gateway_id" {
+  default = null
+}
+variable "destination_cidr_block" {
+  default = "0.0.0.0/0"
 }

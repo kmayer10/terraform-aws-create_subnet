@@ -1,6 +1,6 @@
 variable "vpc_id" {}
 variable "Name" {}
-variable "Type" {}
+variable "type" {}
 variable "create_route_table" {
   default = false
 }

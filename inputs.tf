@@ -1,21 +1,15 @@
-variable "name" {}
-variable "type" {
-  default = "private"
-}
 variable "vpc_id" {}
-variable "subnetStartPoint" {}
-variable "route_table_needed" {
+variable "Name" {}
+variable "Type" {}
+variable "create_route_table" {
   default = false
 }
-variable "route_table_id" {
-  default = null
-}
-variable "nat_route_needed" {
+variable "create_nat_route" {
   default = false
 }
 variable "gateway_id" {
   default = null
 }
 variable "destination_cidr_block" {
-  default = "0.0.0.0/0"
+  default = null
 }

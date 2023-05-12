@@ -4,6 +4,9 @@ variable "Type" {}
 variable "create_route_table" {
   default = false
 }
+variable "route_table_id" {
+  default = null
+}
 variable "create_nat_route" {
   default = false
 }

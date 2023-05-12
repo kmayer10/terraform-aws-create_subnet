@@ -12,7 +12,7 @@ data "aws_subnets" "aws_subnets" {
 }
 locals {
   count           = length(data.aws_availability_zones.aws_availability_zones.names)
-  current_subnets = length(aws_subnets.aws_subnets.ids)
+  current_subnets = length(data.aws_subnets.aws_subnets.ids)
   cidr            = split(".", data.aws_vpc.aws_vpc.cidr_block)
 }
 resource "aws_subnet" "aws_subnet" {
